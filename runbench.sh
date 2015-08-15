@@ -4,7 +4,7 @@ STEP_SIZE=100000
 
 for PYTHON_VERSION in 2 3 
 do
-	RESULT_FILE=results.python$PYTHON_VERSION
+	RESULT_FILE=data/results.python$PYTHON_VERSION
 	: > $RESULT_FILE
 	for RUN in {1..10}
 	do
