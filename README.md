@@ -21,3 +21,4 @@ some scripts to run benchmarks on a computer and create simple charts from the r
 * start benchmarking by entering `./runbench.sh`
 * all results are saved in the data directory
 * the chart should immediately open in your prefered image viewer
+![](https://github.com/oliworx/chartbench/blob/master/data/bench.png)
