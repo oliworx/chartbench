@@ -9,7 +9,6 @@ for i in range(2, int(Max** (0.5))):	# until square root of Max
 numprimes = 0;							# Count all primes
 for i,isprime in P.items():
 	if isprime:
-		##print(i),
 		numprimes=numprimes+1
 
-print(numprimes) 				# print number of primes
+print(numprimes) 						# print number of primes

@@ -1,16 +1,17 @@
 #!/bin/bash
 
-STEP_SIZE=1000000
-
+# clear result files
 cat benchmarks | while read interpreter scriptfile;
 do
-	echo "running '$interpreter $scriptfile' 10 times with increasing load"
-	RESULT_FILE=data/results.$interpreter
-	: > $RESULT_FILE
-	for RUN in {1..10}
+	: > data/results.$interpreter
+done
+
+for PARAM in {100000..1000000..100000}
+do
+	cat benchmarks | while read interpreter scriptfile;
 	do
-		let MAX=RUN*STEP_SIZE
-		/usr/bin/time -f "$MAX\t%U" -a -o $RESULT_FILE $interpreter $scriptfile $MAX
+		echo "running $interpreter: "
+		/usr/bin/time -f "$PARAM\t%U" -a -o data/results.$interpreter $interpreter $scriptfile $PARAM
 	done
 done
 
