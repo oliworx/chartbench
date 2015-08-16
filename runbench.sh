@@ -2,6 +2,14 @@
 
 STEP_SIZE=100000
 
+RESULT_FILE=data/results.php5
+: > $RESULT_FILE
+for RUN in {1..10}
+do
+	let MAX=RUN*STEP_SIZE
+	/usr/bin/time -f "$MAX\t%U" -a -o $RESULT_FILE php primes.php $MAX
+done
+	
 RESULT_FILE=data/results.perl5
 : > $RESULT_FILE
 for RUN in {1..10}
@@ -9,7 +17,7 @@ do
 	let MAX=RUN*STEP_SIZE
 	/usr/bin/time -f "$MAX\t%U" -a -o $RESULT_FILE perl primes.pl $MAX
 done
-	
+
 for PYTHON_VERSION in 2 3 
 do
 	RESULT_FILE=data/results.python$PYTHON_VERSION

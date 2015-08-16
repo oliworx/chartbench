@@ -13,7 +13,7 @@ some scripts to run benchmarks on a computer and create simple charts from the r
 ## how to setup
 * grab the files from github 
 * make shure you have all the tools installed:
-  `sudo apt-get install python python3 gnuplot xdg-utils`
+  `sudo apt-get install python python3 perl gnuplot xdg-utils`
 
 ## how to run
 * open a terminal
