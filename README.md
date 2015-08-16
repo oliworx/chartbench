@@ -1,19 +1,23 @@
 # chartbench
 
 ## what it is
-some scripts to run benchmarks on a computer and create simple charts from the results
+some scripts to run benchmarks on a computer and create simple charts
+from the results
 
 ## what is does
+* it benchmarks some popular scripting languages
 * the benchmark task is calculating all primes up to a given number
-* benchmark is running 10 times with increasing work load
-* the same python code is run by python2 and python3
-* a chart is generated to compare the the performance of python 2 & 3
+  using a straight sieve of Eratosthenes algorithm
+* for every scripting languages the benchmark is running 10 times with 
+  increasing work load
+* for python the same python code is run by python2 and python3
+* a chart is generated to compare the the performance
 
 
 ## how to setup
 * grab the files from github 
 * make shure you have all the tools installed:
-  `sudo apt-get install python python3 perl gnuplot xdg-utils`
+  `sudo apt-get install python python3 perl php-cli gnuplot xdg-utils`
 
 ## how to run
 * open a terminal
