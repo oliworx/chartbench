@@ -1,3 +1,4 @@
+tclsh primes.tcl
 php primes.php
 perl primes.pl
 python2 primes.py

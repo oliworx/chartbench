@@ -11,7 +11,7 @@ for $i (2 .. int(sqrt($n))) {
 }
 
 $numprimes=0;
-for my $i (2 .. $n) {
+for $i (2 .. $n) {
 	$composite[$i] || $numprimes++;
 }
 
