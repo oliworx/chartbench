@@ -10,7 +10,7 @@ set title tit
 set key below
 set grid
 
-plot "data/results.python2" using 1:2 title "Python 2.7.9" with linespoints,\
-     "data/results.python3" using 1:2 title "Python 3.4.3" with linespoints,\
-     "data/results.perl5"   using 1:2 title "Perl 5.20.2"  with linespoints,\
-     "data/results.php5"    using 1:2 title "PHP 5.6.4"    with linespoints,\
+plot "data/results.python2" using 1:2 title "Python2" with linespoints,\
+     "data/results.python3" using 1:2 title "Python3" with linespoints,\
+     "data/results.perl"    using 1:2 title "Perl"    with linespoints,\
+     "data/results.php"     using 1:2 title "PHP"     with linespoints,\

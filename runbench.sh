@@ -1,33 +1,17 @@
 #!/bin/bash
 
-STEP_SIZE=100000
+STEP_SIZE=1000000
 
-RESULT_FILE=data/results.php5
-: > $RESULT_FILE
-for RUN in {1..10}
+cat benchmarks | while read interpreter scriptfile;
 do
-	let MAX=RUN*STEP_SIZE
-	/usr/bin/time -f "$MAX\t%U" -a -o $RESULT_FILE php primes.php $MAX
-done
-	
-RESULT_FILE=data/results.perl5
-: > $RESULT_FILE
-for RUN in {1..10}
-do
-	let MAX=RUN*STEP_SIZE
-	/usr/bin/time -f "$MAX\t%U" -a -o $RESULT_FILE perl primes.pl $MAX
-done
-
-for PYTHON_VERSION in 2 3 
-do
-	RESULT_FILE=data/results.python$PYTHON_VERSION
+	echo "running '$interpreter $scriptfile' 10 times with increasing load"
+	RESULT_FILE=data/results.$interpreter
 	: > $RESULT_FILE
 	for RUN in {1..10}
 	do
 		let MAX=RUN*STEP_SIZE
-		/usr/bin/time -f "$MAX\t%U" -a -o $RESULT_FILE python$PYTHON_VERSION primes.py $MAX
+		/usr/bin/time -f "$MAX\t%U" -a -o $RESULT_FILE $interpreter $scriptfile $MAX
 	done
-	let PYTHON_VERSION=PYTHON_VERSION+1 
 done
 
 CPU=`cat /proc/cpuinfo | grep 'model name' | uniq`
