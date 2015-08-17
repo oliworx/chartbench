@@ -15,4 +15,4 @@ while i <= upper_lim:
             m += i
     i += 1
 
-print(len([x for x in nums if nums]))
+print(sum(nums))
