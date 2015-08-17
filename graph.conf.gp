@@ -17,4 +17,5 @@ plot "data/results.python2" using ($1/1000000):($1/$2/1000000) title "Python2" w
      "data/results.perl"    using ($1/1000000):($1/$2/1000000) title "Perl"    w linespoints,\
      "data/results.php"     using ($1/1000000):($1/$2/1000000) title "PHP"     w linespoints,\
      "data/results.tclsh"   using ($1/1000000):($1/$2/1000000) title "TCL"     w linespoints,\
+     "data/results.pypy"    using ($1/1000000):($1/$2/1000000) title "PyPy"    w linespoints,\
      "data/results.ruby"    using ($1/1000000):($1/$2/1000000) title "Ruby"    w linespoints
