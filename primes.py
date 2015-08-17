@@ -1,14 +1,18 @@
+import array
+import math
 import sys
-Max=int(sys.argv[1])					# get Max from command line args 		
-P = {x: True for x in range(2,Max)}		# first assume numbers are prime
-for i in range(2, int(Max** (0.5))):	# until square root of Max
-	if P[i]:							# 
-		for j in range(i*i, Max, i):	# mark all multiples of a prime
-			P[j]=False					# as not beeing a prime
 
-numprimes = 0;							# Count all primes
-for i,isprime in P.items():
-	if isprime:
-		numprimes=numprimes+1
+n = int(sys.argv[1])
+nums = array.array('i', [False] * 2 + [True] * (n - 2))
 
-print(numprimes) 						# print number of primes
+upper_lim = int(math.sqrt(n))
+i = 2
+while i <= upper_lim:
+    if nums[i]:
+        m = i**2
+        while m < n:
+            nums[m] = False
+            m += i
+    i += 1
+
+print(len([x for x in nums if nums]))
