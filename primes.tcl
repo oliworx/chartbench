@@ -12,10 +12,4 @@ for {set i 2} {$i <= $sqrtn} {incr i} {
 	}
 }
 	
-set numprimes 0;
-for {set i 2} {$i<=$n} {incr i} {
-	if (![info exists composite($i)]) {
-		incr numprimes;
-	}
-}
-puts $numprimes;
+puts [expr $n - 1 - [array size composite]]
