@@ -6,7 +6,7 @@ do
 	: > data/results.$interpreter
 done
 
-for PARAM in {100000..1000000..100000}
+for PARAM in {200000..2000000..200000}
 do
 	cat benchmarks | while read interpreter scriptfile;
 	do
