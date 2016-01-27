@@ -1,6 +1,7 @@
 ruby primes.rb
 tclsh primes.tcl
 php primes.php
+php5.6 primes.php
 perl primes.pl
 python2 primes.py
 python3 primes.py
