@@ -1,5 +1,8 @@
 # chartbench
 
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/823777f934b041bbb927dc37c3502c2c)](https://www.codacy.com/app/kurmis/chartbench?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=oliworx/chartbench&amp;utm_campaign=badger)
+
 ## what it is
 some scripts to run benchmarks on a computer and create simple charts
 from the results
